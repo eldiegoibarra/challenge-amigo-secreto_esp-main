@@ -11,9 +11,8 @@ function agregarAmigo(){
     let losNombres = JSON.parse(localStorage.getItem("losNombres")) || []; // Para los nombres agregados
     losNombres.push(nombre); // agregar nuevo nombre
     localStorage.setItem("losNombres", JSON.stringify(losNombres)); // Guarda y actualiza la lista 
-  //  document.getElementById("nameInput").value = ""; // Clear input field
-  document.getElementById("amigo").value = "";  
-  listaAmigos(); // Update the list on screen
+     document.getElementById("amigo").value = ""; // limpia la caja
+    listaAmigos(); // Update the list on screen
    // alert("Nombre guardado") -  opcional
 
 }
