@@ -8,11 +8,16 @@ function agregarAmigo(){
         return;
     }
 
-}
-
-let losNombres = JSON.parse(localStorage.getItem("losNombres")) || []; // Para los nombres agregados
+    let losNombres = JSON.parse(localStorage.getItem("losNombres")) || []; // Para los nombres agregados
     losNombres.push(nombre); // agregar nuevo nombre
     localStorage.setItem("losNombres", JSON.stringify(losNombres)); // Guarda y actualiza la lista 
   //  document.getElementById("nameInput").value = ""; // Clear input field
-    listaAmigos(); // Update the list on screen
-    alert("Name saved!");
+  document.getElementById("amigo").value = "";  
+  listaAmigos(); // Update the list on screen
+   // alert("Nombre guardado") -  opcional
+
+}
+
+function listaAmigos() {
+    let losNombres = JSON.parse(localStorage.getItem("losNombres"))
+}
