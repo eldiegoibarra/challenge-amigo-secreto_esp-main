@@ -4,13 +4,15 @@ function agregarAmigo(){
     console.log(nombre); // revisando si los nombres se guardan en la consola
 
     if (nombre === ""){
-        alert("Por favor ingresa un nombre válido."); // Alerta si no hay nombre ingresadd
+        alert("Por favor ingresa un nombre válido."); // Alerta si no hay nombre ingresado
         return;
     }
 
 }
 
-
-function sorteo(){
-
-}
+let losNombres = JSON.parse(localStorage.getItem("losNombres")) || []; // Para los nombres agregados
+    losNombres.push(nombre); // agregar nuevo nombre
+    localStorage.setItem("losNombres", JSON.stringify(losNombres)); // Guarda y actualiza la lista 
+  //  document.getElementById("nameInput").value = ""; // Clear input field
+    listaAmigos(); // Update the list on screen
+    alert("Name saved!");
