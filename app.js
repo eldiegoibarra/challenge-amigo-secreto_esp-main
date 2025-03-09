@@ -6,9 +6,10 @@ let nombres = []; // Guardar nombres
 function agregarAmigo() {
     let input = document.getElementById("amigo"); // Usando el DOM
     let nombre = input.value;
+    console.log(nombre); // verificando nombres ingresan a la consola
 
     if (nombre === "") {
-        alert("Por favor, ingresa un nombre válido."); // Haciendo click sin haber colocado un nombre
+        alert("Por favor, ingresa un nombre válido."); // Mensaje cuando no hay input
         return;
     }
 
@@ -25,6 +26,7 @@ function sortearAmigo() {
     }
     let index = Math.floor(Math.random() * nombres.length);
     document.getElementById("resultado").textContent = "El amigos secreto es: " + nombres[index];
+    console.log(index); // ver que posicion de los nombres es elegida (de 0 a X )
 }
 
 // Function para mostrar la lista
