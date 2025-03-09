@@ -41,7 +41,7 @@ function mostrarLista() {
     }
 }
 
-// Resetear cuando la pagina recarga
+// Resetear la lista de nombres cuando la pagina recarga 
 window.onload = function () {
     nombres = [];
     document.getElementById("resultado").innerHTML = "";
